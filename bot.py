@@ -173,6 +173,26 @@ class ReplyRequest(BaseModel):
     turn_number: int = 1
 
 
+# -- GET / (landing) -----------------------------------------------------------
+
+@app.get("/")
+async def root():
+    return {
+        "name": "Vera",
+        "description": "magicpin AI Engagement Bot — merchant message composer",
+        "version": _VERSION,
+        "status": "live",
+        "endpoints": {
+            "healthz":  "GET  /v1/healthz",
+            "metadata": "GET  /v1/metadata",
+            "context":  "POST /v1/context",
+            "tick":     "POST /v1/tick",
+            "reply":    "POST /v1/reply",
+        },
+        "docs": "/docs",
+    }
+
+
 # -- Middleware: request timing ------------------------------------------------
 
 @app.middleware("http")
