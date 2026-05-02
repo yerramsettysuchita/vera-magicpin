@@ -1,0 +1,29 @@
+# fly.toml — deploy with: fly launch (first time) or fly deploy (updates)
+# Set secret: fly secrets set ANTHROPIC_API_KEY=<your-key>
+
+app = "vera-magicpin"
+primary_region = "bom"   # Mumbai — lowest latency to Indian judge infrastructure
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  VERA_LOG_LEVEL = "INFO"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = false   # must stay live 3 days post-deadline
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.concurrency]
+    type = "requests"
+    hard_limit = 50
+    soft_limit = 25
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1

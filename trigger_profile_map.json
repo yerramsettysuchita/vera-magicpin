@@ -1,0 +1,198 @@
+{
+  "_README": "8 trigger profiles mapping all 26 trigger kinds to composition strategies. Phase 1 output — feeds Phase 2 prompt routing.",
+  "profiles": [
+    {
+      "profile_id": "knowledge_digest",
+      "trigger_kinds": ["research_digest", "regulation_change", "cde_opportunity", "supply_alert"],
+      "scope": "merchant",
+      "primary_lever": "Lever 1 — Specificity/verifiability (source citation + trial data + exact numbers)",
+      "secondary_lever": "Lever 6 — Reciprocity ('I noticed this is relevant to your specific practice')",
+      "voice_register": "clinical/authority — peer-clinical for dentists, trustworthy-precise for pharmacies, coach for gyms",
+      "cta_type": "open_ended",
+      "send_as": "vera",
+      "key_payload_fields": ["top_item_id (links to digest: title, source, trial_n, patient_segment)", "deadline_iso (regulation)", "credits + fee (CDE)", "molecule + affected_batches + manufacturer (supply)"],
+      "key_merchant_fields": ["category_slug", "customer_aggregate.high_risk_adult_count", "customer_aggregate.chronic_rx_count", "signals", "identity.owner_first_name"],
+      "anti_patterns": [
+        "Generic 'research shows...' without source citation — caps Specificity at 7",
+        "Promotional framing of compliance alerts (urgency without precision)",
+        "Sending a research digest item that doesn't match the merchant's actual patient cohort",
+        "Omitting the source page/citation number — judge checks this"
+      ],
+      "opening_pattern": "{owner_salutation}, {source} {date_or_issue} landed — {specific_item} directly relevant to {merchant_specific_cohort}.",
+      "rationale_pattern": "External {kind} with source-cited anchor ({source_citation}); relevance derived from merchant's {cohort_signal}; open CTA to draft follow-on action."
+    },
+    {
+      "profile_id": "perf_dip_recovery",
+      "trigger_kinds": ["perf_dip", "seasonal_perf_dip"],
+      "scope": "merchant",
+      "primary_lever": "Lever 1 — Specificity/verifiability (exact metric delta from trigger payload)",
+      "secondary_lever": "Lever 2 — Loss aversion ('gap is growing before the window closes')",
+      "voice_register": "peer — fellow operator reading data together, no alarm",
+      "cta_type": "open_ended",
+      "send_as": "vera",
+      "key_payload_fields": ["metric", "delta_pct", "window", "vs_baseline", "is_expected_seasonal", "season_note"],
+      "key_merchant_fields": ["performance.ctr vs category peer_stats.avg_ctr", "signals", "subscription.status", "identity.owner_first_name"],
+      "anti_patterns": [
+        "Alarming tone for seasonal dips — judge penalizes if seasonal context was available but ignored",
+        "Vague 'your performance is down' without specific metric + number",
+        "Offering paid upgrades as the fix for a performance dip without diagnosing first",
+        "Repeating the dip message if it was already sent last tick (anti-repetition penalty)"
+      ],
+      "opening_pattern": "{owner}, {metric} down {delta_pct}% this {window} (vs baseline {vs_baseline}). {seasonal_reframe_if_applicable}. {single_diagnosis_or_fix}.",
+      "rationale_pattern": "Internal {kind} — {metric} at {value} vs {baseline}; {seasonal/non-seasonal} context applied; offering {specific_fix_action}."
+    },
+    {
+      "profile_id": "perf_win",
+      "trigger_kinds": ["perf_spike", "milestone_reached"],
+      "scope": "merchant",
+      "primary_lever": "Lever 5 — Curiosity ('want to see what drove this / what you can do next?')",
+      "secondary_lever": "Lever 4 — Effort externalization ('I'll draft the follow-up post right now')",
+      "voice_register": "peer — celebrating together, momentum framing",
+      "cta_type": "open_ended",
+      "send_as": "vera",
+      "key_payload_fields": ["metric", "delta_pct", "value_now", "milestone_value", "is_imminent", "likely_driver"],
+      "key_merchant_fields": ["performance.ctr vs peer_stats", "conversation_history (last engagement)", "identity.owner_first_name"],
+      "anti_patterns": [
+        "Hollow 'congratulations!' without any actionable next step",
+        "Ignoring the momentum to pivot to an unrelated promo",
+        "Overclaiming causation when likely_driver is uncertain (placeholder triggers)",
+        "Not proposing a specific follow-up action within the same message"
+      ],
+      "opening_pattern": "{owner}, {metric} {up/milestone} — {specific_anchor}. {derive_driver_if_known}. Want me to capitalize on this right now?",
+      "rationale_pattern": "Internal {kind} — {metric} at {value}; proposing immediate action to convert momentum while signal is hot."
+    },
+    {
+      "profile_id": "event_seasonal",
+      "trigger_kinds": ["festival_upcoming", "category_seasonal", "ipl_match_today"],
+      "scope": "merchant",
+      "primary_lever": "Lever 2 — Loss aversion ('window closes in N days / skip this mistake / -12% covers on Saturday')",
+      "secondary_lever": "Lever 4 — Effort externalization ('I'll draft the promo in 10 min')",
+      "voice_register": "warm_practical — operator-to-operator timing intelligence",
+      "cta_type": "binary",
+      "send_as": "vera",
+      "key_payload_fields": ["festival/event name", "date", "days_until", "category_relevance", "is_weeknight", "match_time_iso", "trends (percentages for category_seasonal)"],
+      "key_merchant_fields": ["active offers (for promo tie-in)", "identity.locality", "category seasonal_beats", "signals"],
+      "anti_patterns": [
+        "Pushing a match-night promo on a Saturday (IPL Saturday = -12% covers — the bot must know this)",
+        "Generic 'Diwali is coming, run a promotion' with no category-specific angle",
+        "Missing the contrarian insight (the case study 5 lesson: sometimes the right advice is NOT to promo)",
+        "No specific deliverable offered (judge expects 'I'll draft the Swiggy banner' not just 'you should promote')"
+      ],
+      "opening_pattern": "Quick heads-up {owner} — {event} {date_or_days}. {contrarian_data_or_category_insight}. {specific_deliverable} — live in 10 min?",
+      "rationale_pattern": "External {kind} — {specific_event}; category data anchor ({source}); contrarian/actionable recommendation with effort-capped deliverable."
+    },
+    {
+      "profile_id": "activation_urgency",
+      "trigger_kinds": ["dormant_with_vera", "winback_eligible", "renewal_due", "gbp_unverified", "competitor_opened", "review_theme_emerged"],
+      "scope": "merchant",
+      "primary_lever": "Lever 2 — Loss aversion ('X customers lapsed / competitor at ₹199 / compliance penalty / 30% uplift missed')",
+      "secondary_lever": "Lever 7 — Asking the merchant (for dormant: 'what's been happening?' — re-opens conversation)",
+      "voice_register": "peer — practical, non-pushy, data-first",
+      "cta_type": "binary for renewal/competitor; open_ended for dormant/review",
+      "send_as": "vera",
+      "key_payload_fields": ["days_since_expiry", "competitor_name + distance_km + their_offer", "theme + occurrences_30d + common_quote", "days_dormant", "estimated_uplift_pct", "days_remaining"],
+      "key_merchant_fields": ["subscription.status", "signals", "performance.delta_7d", "customer_aggregate.lapsed_count", "identity.owner_first_name"],
+      "anti_patterns": [
+        "Aggressive 'you're losing customers!' panic framing — peer tone is always analytical, not alarming",
+        "Long preamble before the data point ('I hope you're doing well, I'm reaching out because...')",
+        "Renewal pitch that doesn't mention what specifically pauses without the subscription",
+        "Dormant re-engagement that doesn't ask a question or offer something new"
+      ],
+      "opening_pattern": "{owner}, {specific_data_point_of_concern} — {derived_impact_in_numbers}. {single_clear_action}?",
+      "rationale_pattern": "Internal/external {kind} triggering {specific_loss_quantified}; {single_action_CTA} to address it; peer tone maintained."
+    },
+    {
+      "profile_id": "planning_curiosity",
+      "trigger_kinds": ["curious_ask_due", "active_planning_intent"],
+      "scope": "merchant",
+      "primary_lever": "Lever 7 — Asking the merchant (curious_ask) / Lever 4 — Effort externalization (active_planning)",
+      "secondary_lever": "Lever 6 — Reciprocity ('I'll build X from your answer / here's the full draft, just review')",
+      "voice_register": "warm_practical — collaborative, low-pressure",
+      "cta_type": "open_ended",
+      "send_as": "vera",
+      "key_payload_fields": ["ask_template", "last_ask_at", "intent_topic", "merchant_last_message"],
+      "key_merchant_fields": ["conversation_history (last merchant reply + engagement tag)", "active offers", "customer_aggregate", "identity.owner_first_name"],
+      "anti_patterns": [
+        "Asking multiple questions in one message — only one question allowed",
+        "Curious-ask without stating the specific deliverable it produces",
+        "Active-planning response that keeps asking qualifying questions instead of delivering the artifact",
+        "Repeating the same curious-ask topic from the previous session (anti-repetition)"
+      ],
+      "opening_pattern": "Hi {owner} — {single_question_or_complete_artifact}. {concrete_deliverable_in_5_min_or_less}.",
+      "rationale_pattern": "Conversation-cadence {kind} — {single_low_friction_ask} with explicit deliverable ({deliverable}); builds engagement without pressure."
+    },
+    {
+      "profile_id": "customer_recall",
+      "trigger_kinds": ["recall_due", "appointment_tomorrow", "trial_followup", "wedding_package_followup"],
+      "scope": "customer",
+      "primary_lever": "Lever 8 — Single binary commitment ('Reply 1 for Wed, 2 for Thu / Reply YES to confirm')",
+      "secondary_lever": "Lever 4 — Effort externalization ('slot held for you, just confirm')",
+      "voice_register": "warm-clinical for dentists; warm-practical for salons/gyms; trustworthy for pharmacies",
+      "cta_type": "multi_choice_slot or binary_yes_no",
+      "send_as": "merchant_on_behalf",
+      "key_payload_fields": ["service_due", "due_date", "available_slots", "trial_date", "next_session_options", "wedding_date", "days_to_wedding", "next_step_window_open"],
+      "key_merchant_fields": ["offers (active catalog price)", "identity.name (for attribution)", "identity.languages"],
+      "anti_patterns": [
+        "Not specifying actual slot times (especially bad for placeholder triggers — use category context defaults)",
+        "Promotional tone in clinical context (dental/pharmacy recall must be clinical-warm, not pushy)",
+        "Re-introducing Vera to a customer — messages go as merchant, not Vera",
+        "Sending without customer language preference — hi-en mix customers must get mixed language"
+      ],
+      "opening_pattern": "Hi {customer_name}, {merchant_name} here {category_emoji_if_warm}. {specific_trigger_fact}. {available_slots_or_offer}. Reply {binary_or_choice}.",
+      "rationale_pattern": "Customer-scoped {kind}; send_as=merchant_on_behalf; {language_pref} honored; {slot_or_offer} from active catalog; binary/slot CTA."
+    },
+    {
+      "profile_id": "customer_winback",
+      "trigger_kinds": ["customer_lapsed_soft", "customer_lapsed_hard", "chronic_refill_due"],
+      "scope": "customer",
+      "primary_lever": "Lever 5 — Curiosity for soft lapse ('something new that fits your goal') / Lever 2 — Loss aversion for hard lapse / Lever 8 — Binary for refill",
+      "secondary_lever": "Lever 4 — Effort externalization ('no commitment / pre-filled order, just confirm')",
+      "voice_register": "warm (no-shame, no guilt-trip) for lapse; trustworthy_precise (namaste) for chronic refill",
+      "cta_type": "binary_yes_no",
+      "send_as": "merchant_on_behalf",
+      "key_payload_fields": ["days_since_last_visit", "previous_focus", "previous_membership_months", "molecule_list", "stock_runs_out_iso", "delivery_address_saved"],
+      "key_merchant_fields": ["offers (active for re-engagement)", "customer_aggregate.lapsed_count", "identity.name"],
+      "anti_patterns": [
+        "Guilt-trip 'we miss you!' framing — explicitly penalized in gym/salon context",
+        "No specific re-engagement offer tied to customer's previous goal/condition",
+        "For chronic refill: omitting molecule names or run-out date — precision is the whole signal",
+        "Missing 'no commitment' / 'no auto-charge' language for lapsed gym customers (major CTA barrier)"
+      ],
+      "opening_pattern": "Hi {customer_name}, {merchant_name} here. {non_pushy_time_note}. {specific_offer_matching_previous_goal}. {no_commitment_language}. Reply YES.",
+      "rationale_pattern": "Customer-scoped {kind}; {no_shame/precise} framing; {previous_goal} referenced; binary CTA with explicit friction-removal."
+    }
+  ],
+  "_coverage_verification": {
+    "all_26_kinds_covered": true,
+    "customer_facing_profiles": ["customer_recall", "customer_winback"],
+    "merchant_facing_profiles": ["knowledge_digest", "perf_dip_recovery", "perf_win", "event_seasonal", "activation_urgency", "planning_curiosity"],
+    "kind_to_profile_map": {
+      "research_digest": "knowledge_digest",
+      "regulation_change": "knowledge_digest",
+      "cde_opportunity": "knowledge_digest",
+      "supply_alert": "knowledge_digest",
+      "perf_dip": "perf_dip_recovery",
+      "seasonal_perf_dip": "perf_dip_recovery",
+      "perf_spike": "perf_win",
+      "milestone_reached": "perf_win",
+      "festival_upcoming": "event_seasonal",
+      "category_seasonal": "event_seasonal",
+      "ipl_match_today": "event_seasonal",
+      "dormant_with_vera": "activation_urgency",
+      "winback_eligible": "activation_urgency",
+      "renewal_due": "activation_urgency",
+      "gbp_unverified": "activation_urgency",
+      "competitor_opened": "activation_urgency",
+      "review_theme_emerged": "activation_urgency",
+      "curious_ask_due": "planning_curiosity",
+      "active_planning_intent": "planning_curiosity",
+      "recall_due": "customer_recall",
+      "appointment_tomorrow": "customer_recall",
+      "trial_followup": "customer_recall",
+      "wedding_package_followup": "customer_recall",
+      "customer_lapsed_soft": "customer_winback",
+      "customer_lapsed_hard": "customer_winback",
+      "chronic_refill_due": "customer_winback"
+    }
+  }
+}

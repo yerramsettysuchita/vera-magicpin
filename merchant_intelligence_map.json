@@ -1,0 +1,2038 @@
+{
+  "m_001_drmeera_dentist_delhi": {
+    "merchant_id": "m_001_drmeera_dentist_delhi",
+    "name": "Dr. Meera's Dental Clinic",
+    "city": "Delhi",
+    "locality": "Lajpat Nagar",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Meera",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 82,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2410,
+      "calls": 18,
+      "ctr": 0.021,
+      "ctr_vs_peer": -0.009
+    },
+    "delta_7d": {
+      "views_pct": 0.18,
+      "calls_pct": -0.05,
+      "ctr_pct": 0.02
+    },
+    "active_offers": [
+      "Dental Cleaning @ ₹299"
+    ],
+    "signals": [
+      "stale_posts:22d",
+      "ctr_below_peer_median",
+      "high_risk_adult_cohort",
+      "engaged_in_last_48h"
+    ],
+    "last_msg_topic": "Yes please, focus on whitening and aligners",
+    "last_engagement": "intent_action",
+    "customer_aggregate": {
+      "total_unique_ytd": 540,
+      "lapsed_180d_plus": 78,
+      "retention_6mo_pct": 0.38,
+      "high_risk_adult_count": 124
+    },
+    "review_themes": [
+      {
+        "theme": "wait_time",
+        "sentiment": "neg",
+        "occurrences_30d": 3,
+        "common_quote": "had to wait 30 min on Sunday afternoon"
+      },
+      {
+        "theme": "doctor_manner",
+        "sentiment": "pos",
+        "occurrences_30d": 5,
+        "common_quote": "Dr. Meera explains everything patiently"
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_002_bharat_dentist_mumbai": {
+    "merchant_id": "m_002_bharat_dentist_mumbai",
+    "name": "Bharat Dental Care",
+    "city": "Mumbai",
+    "locality": "Andheri West",
+    "category": "dentists",
+    "verified": false,
+    "owner": "Bharat",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 12,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 980,
+      "calls": 4,
+      "ctr": 0.018,
+      "ctr_vs_peer": -0.012
+    },
+    "delta_7d": {
+      "views_pct": -0.22,
+      "calls_pct": -0.5,
+      "ctr_pct": -0.1
+    },
+    "active_offers": [],
+    "signals": [
+      "renewal_due_soon:12d",
+      "perf_dip_severe",
+      "unverified_gbp",
+      "dormant_with_vera_14d",
+      "no_active_offers"
+    ],
+    "last_msg_topic": "Subscription expires in 16 days — Bharat Dental Care...",
+    "last_engagement": "merchant_no_reply",
+    "customer_aggregate": {
+      "total_unique_ytd": 220,
+      "lapsed_180d_plus": 95,
+      "retention_6mo_pct": 0.18
+    },
+    "review_themes": [],
+    "data_richness": "HIGH"
+  },
+  "m_003_studio11_salon_hyderabad": {
+    "merchant_id": "m_003_studio11_salon_hyderabad",
+    "name": "Studio11 Family Salon",
+    "city": "Hyderabad",
+    "locality": "Kapra",
+    "category": "salons",
+    "verified": true,
+    "owner": "Lakshmi",
+    "languages": [
+      "en",
+      "hi",
+      "te"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 145,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 4980,
+      "calls": 62,
+      "ctr": 0.048,
+      "ctr_vs_peer": 0.008
+    },
+    "delta_7d": {
+      "views_pct": 0.14,
+      "calls_pct": 0.2,
+      "ctr_pct": 0.05
+    },
+    "active_offers": [
+      "Haircut @ ₹99",
+      "Hair Spa @ ₹499"
+    ],
+    "signals": [
+      "high_engagement",
+      "above_peer_median_calls",
+      "growing_views_7d"
+    ],
+    "last_msg_topic": "Spotted: bridal-trial searches in Kapra +28% this week. Want",
+    "last_engagement": "merchant_no_reply",
+    "customer_aggregate": {
+      "total_unique_ytd": 1150,
+      "lapsed_90d_plus": 220,
+      "retention_3mo_pct": 0.62
+    },
+    "review_themes": [
+      {
+        "theme": "stylist_skill",
+        "sentiment": "pos",
+        "occurrences_30d": 12,
+        "common_quote": "Priya is the best for balayage"
+      },
+      {
+        "theme": "saturday_wait",
+        "sentiment": "neg",
+        "occurrences_30d": 2
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_004_glamour_salon_pune": {
+    "merchant_id": "m_004_glamour_salon_pune",
+    "name": "Glamour Lounge Spa & Salon",
+    "city": "Pune",
+    "locality": "Aundh",
+    "category": "salons",
+    "verified": true,
+    "owner": "Anjali",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1200,
+      "calls": 8,
+      "ctr": 0.022,
+      "ctr_vs_peer": -0.018
+    },
+    "delta_7d": {
+      "views_pct": -0.12,
+      "calls_pct": -0.3,
+      "ctr_pct": -0.04
+    },
+    "active_offers": [],
+    "signals": [
+      "winback_eligible",
+      "perf_dip_post_expiry",
+      "dormant_with_vera_38d"
+    ],
+    "last_msg_topic": "Subscription expired. Profile maintenance paused...",
+    "last_engagement": "merchant_no_reply",
+    "customer_aggregate": {
+      "total_unique_ytd": 380,
+      "lapsed_90d_plus": 180,
+      "retention_3mo_pct": 0.32
+    },
+    "review_themes": [],
+    "data_richness": "HIGH"
+  },
+  "m_005_pizzajunction_restaurant_delhi": {
+    "merchant_id": "m_005_pizzajunction_restaurant_delhi",
+    "name": "SK Pizza Junction",
+    "city": "Delhi",
+    "locality": "Sant Nagar",
+    "category": "restaurants",
+    "verified": false,
+    "owner": "Suresh",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "trial",
+      "days_remaining": 7,
+      "plan": "Trial"
+    },
+    "performance": {
+      "views": 2200,
+      "calls": 12,
+      "ctr": 0.02,
+      "ctr_vs_peer": -0.005
+    },
+    "delta_7d": {
+      "views_pct": 0.08,
+      "calls_pct": 0.1
+    },
+    "active_offers": [
+      "Buy 1 Pizza Get 1 Free (Tue-Thu)"
+    ],
+    "signals": [
+      "new_merchant",
+      "trial_ending_soon",
+      "ipl_eligible_locality"
+    ],
+    "last_msg_topic": "Quick check — IPL match nights driving any extra footfall?",
+    "last_engagement": "merchant_no_reply",
+    "customer_aggregate": {
+      "total_unique_ytd": 0,
+      "delivery_orders_30d": 180,
+      "dine_in_orders_30d": 95
+    },
+    "review_themes": [
+      {
+        "theme": "delivery_late",
+        "sentiment": "neg",
+        "occurrences_30d": 4
+      },
+      {
+        "theme": "pizza_quality",
+        "sentiment": "pos",
+        "occurrences_30d": 8
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_006_southindiancafe_restaurant_bangalore": {
+    "merchant_id": "m_006_southindiancafe_restaurant_bangalore",
+    "name": "Mylari South Indian Cafe",
+    "city": "Bangalore",
+    "locality": "Indiranagar",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Suresh",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 240,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 12400,
+      "calls": 88,
+      "ctr": 0.032,
+      "ctr_vs_peer": 0.007
+    },
+    "delta_7d": {
+      "views_pct": 0.05,
+      "calls_pct": 0.02
+    },
+    "active_offers": [
+      "Weekday Lunch Thali @ ₹149"
+    ],
+    "signals": [
+      "high_volume",
+      "stable_growth",
+      "engaged_in_last_24h"
+    ],
+    "last_msg_topic": "Yes good idea, what would it look like",
+    "last_engagement": "intent_question",
+    "customer_aggregate": {
+      "total_unique_ytd": 4200,
+      "repeat_customer_pct": 0.42,
+      "delivery_share_pct": 0.45
+    },
+    "review_themes": [
+      {
+        "theme": "thali_quality",
+        "sentiment": "pos",
+        "occurrences_30d": 22
+      },
+      {
+        "theme": "weekend_busy",
+        "sentiment": "neg",
+        "occurrences_30d": 3
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_007_powerhouse_gym_bangalore": {
+    "merchant_id": "m_007_powerhouse_gym_bangalore",
+    "name": "PowerHouse Fitness",
+    "city": "Bangalore",
+    "locality": "HSR Layout",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Karthik",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 95,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1480,
+      "calls": 22,
+      "ctr": 0.052,
+      "ctr_vs_peer": 0.007
+    },
+    "delta_7d": {
+      "views_pct": -0.3,
+      "calls_pct": -0.35
+    },
+    "active_offers": [
+      "3 FREE Trial Classes"
+    ],
+    "signals": [
+      "seasonal_dip_apr_may",
+      "above_peer_ctr",
+      "no_recent_post"
+    ],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_active_members": 245,
+      "monthly_churn_pct": 0.1,
+      "trial_to_paid_pct": 0.28
+    },
+    "review_themes": [
+      {
+        "theme": "equipment_quality",
+        "sentiment": "pos",
+        "occurrences_30d": 7
+      },
+      {
+        "theme": "morning_crowd",
+        "sentiment": "neg",
+        "occurrences_30d": 4
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_008_zenyoga_gym_chennai": {
+    "merchant_id": "m_008_zenyoga_gym_chennai",
+    "name": "Zen Yoga Studio",
+    "city": "Chennai",
+    "locality": "Mylapore",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Padma",
+    "languages": [
+      "en",
+      "ta",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 180,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 880,
+      "calls": 18,
+      "ctr": 0.062,
+      "ctr_vs_peer": 0.017
+    },
+    "delta_7d": {
+      "views_pct": 0.1,
+      "calls_pct": 0.15
+    },
+    "active_offers": [
+      "First Month @ ₹499",
+      "Free Body Composition Analysis"
+    ],
+    "signals": [
+      "high_retention",
+      "active_planning",
+      "boutique_segment"
+    ],
+    "last_msg_topic": "Great idea — kids yoga summer camps are peaking now. Sugge",
+    "last_engagement": "merchant_replied",
+    "customer_aggregate": {
+      "total_active_members": 95,
+      "monthly_churn_pct": 0.05,
+      "trial_to_paid_pct": 0.55
+    },
+    "review_themes": [
+      {
+        "theme": "instructor_quality",
+        "sentiment": "pos",
+        "occurrences_30d": 9
+      },
+      {
+        "theme": "small_classes",
+        "sentiment": "pos",
+        "occurrences_30d": 6
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_009_apollo_pharmacy_jaipur": {
+    "merchant_id": "m_009_apollo_pharmacy_jaipur",
+    "name": "Apollo Health Plus Pharmacy",
+    "city": "Jaipur",
+    "locality": "Malviya Nagar",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Ramesh",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 60,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1850,
+      "calls": 38,
+      "ctr": 0.045,
+      "ctr_vs_peer": 0.007
+    },
+    "delta_7d": {
+      "views_pct": 0.06,
+      "calls_pct": 0.08
+    },
+    "active_offers": [
+      "Free Home Delivery > ₹499",
+      "Senior Citizen 15% OFF"
+    ],
+    "signals": [
+      "above_peer_calls",
+      "compliance_aware",
+      "high_repeat_rate"
+    ],
+    "last_msg_topic": "Yes send me the list please",
+    "last_engagement": "intent_action",
+    "customer_aggregate": {
+      "total_unique_ytd": 1820,
+      "repeat_customer_pct": 0.68,
+      "chronic_rx_count": 240
+    },
+    "review_themes": [
+      {
+        "theme": "delivery_speed",
+        "sentiment": "pos",
+        "occurrences_30d": 11
+      },
+      {
+        "theme": "medicine_availability",
+        "sentiment": "pos",
+        "occurrences_30d": 8
+      }
+    ],
+    "data_richness": "HIGH"
+  },
+  "m_010_sunrisepharm_pharmacy_lucknow": {
+    "merchant_id": "m_010_sunrisepharm_pharmacy_lucknow",
+    "name": "Sunrise Medicos",
+    "city": "Lucknow",
+    "locality": "Gomti Nagar",
+    "category": "pharmacies",
+    "verified": false,
+    "owner": "Vikas",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 200,
+      "plan": "Basic"
+    },
+    "performance": {
+      "views": 720,
+      "calls": 14,
+      "ctr": 0.041,
+      "ctr_vs_peer": 0.003
+    },
+    "delta_7d": {
+      "views_pct": 0.02,
+      "calls_pct": 0.05
+    },
+    "active_offers": [],
+    "signals": [
+      "unverified_gbp",
+      "no_active_offers",
+      "no_recent_conversation",
+      "delivery_not_set_up"
+    ],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 540,
+      "repeat_customer_pct": 0.45,
+      "chronic_rx_count": 60
+    },
+    "review_themes": [],
+    "data_richness": "HIGH"
+  },
+  "m_011_dr_sameer_dentist_bangalore": {
+    "merchant_id": "m_011_dr_sameer_dentist_bangalore",
+    "name": "Bright Smile Dental",
+    "city": "Bangalore",
+    "locality": "Indiranagar",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Dr. Sameer",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 4792,
+      "calls": 55,
+      "ctr": 0.046,
+      "ctr_vs_peer": 0.016
+    },
+    "delta_7d": {
+      "views_pct": -0.2,
+      "calls_pct": 0.16
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1905
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_012_dr_karthik_dentist_mumbai": {
+    "merchant_id": "m_012_dr_karthik_dentist_mumbai",
+    "name": "Apex Dental Care",
+    "city": "Mumbai",
+    "locality": "Lower Parel",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Dr. Karthik",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 257,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1381,
+      "calls": 16,
+      "ctr": 0.036,
+      "ctr_vs_peer": 0.006
+    },
+    "delta_7d": {
+      "views_pct": -0.25,
+      "calls_pct": -0.06
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1505
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_013_dr_neha_dentist_jaipur": {
+    "merchant_id": "m_013_dr_neha_dentist_jaipur",
+    "name": "Pearl Dental Studio",
+    "city": "Jaipur",
+    "locality": "C-Scheme",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Dr. Neha",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 195,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3223,
+      "calls": 39,
+      "ctr": 0.017,
+      "ctr_vs_peer": -0.013
+    },
+    "delta_7d": {
+      "views_pct": 0.21,
+      "calls_pct": -0.08
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1858
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_014_dr_asha_dentist_chandigarh": {
+    "merchant_id": "m_014_dr_asha_dentist_chandigarh",
+    "name": "Asha Dental Care",
+    "city": "Chandigarh",
+    "locality": "Sector 17",
+    "category": "dentists",
+    "verified": false,
+    "owner": "Dr. Asha",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 97,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3722,
+      "calls": 33,
+      "ctr": 0.029,
+      "ctr_vs_peer": -0.001
+    },
+    "delta_7d": {
+      "views_pct": -0.22,
+      "calls_pct": -0.26
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 88
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_015_dr_priya_dentist_chandigarh": {
+    "merchant_id": "m_015_dr_priya_dentist_chandigarh",
+    "name": "Family Dental Centre",
+    "city": "Chandigarh",
+    "locality": "Sector 22",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Dr. Priya",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 239,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5908,
+      "calls": 10,
+      "ctr": 0.055,
+      "ctr_vs_peer": 0.025
+    },
+    "delta_7d": {
+      "views_pct": 0.26,
+      "calls_pct": 0.04
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1417
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_016_dr_rajan_dentist_pune": {
+    "merchant_id": "m_016_dr_rajan_dentist_pune",
+    "name": "City Dental Clinic",
+    "city": "Pune",
+    "locality": "Baner",
+    "category": "dentists",
+    "verified": false,
+    "owner": "Dr. Rajan",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 291,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1645,
+      "calls": 4,
+      "ctr": 0.017,
+      "ctr_vs_peer": -0.013
+    },
+    "delta_7d": {
+      "views_pct": 0.21,
+      "calls_pct": -0.18
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 138
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_017_dr_rajan_dentist_mumbai": {
+    "merchant_id": "m_017_dr_rajan_dentist_mumbai",
+    "name": "City Dental Clinic",
+    "city": "Mumbai",
+    "locality": "Andheri West",
+    "category": "dentists",
+    "verified": true,
+    "owner": "Dr. Rajan",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "trial",
+      "days_remaining": 3,
+      "plan": "Trial"
+    },
+    "performance": {
+      "views": 5466,
+      "calls": 41,
+      "ctr": 0.03,
+      "ctr_vs_peer": 0.0
+    },
+    "delta_7d": {
+      "views_pct": -0.24,
+      "calls_pct": -0.14
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1826
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_018_dr_asha_dentist_ahmedabad": {
+    "merchant_id": "m_018_dr_asha_dentist_ahmedabad",
+    "name": "Asha Dental Care",
+    "city": "Ahmedabad",
+    "locality": "Thaltej",
+    "category": "dentists",
+    "verified": false,
+    "owner": "Dr. Asha",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 159,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2105,
+      "calls": 23,
+      "ctr": 0.034,
+      "ctr_vs_peer": 0.004
+    },
+    "delta_7d": {
+      "views_pct": -0.01,
+      "calls_pct": 0.14
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1980
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_019_karim_salon_lucknow": {
+    "merchant_id": "m_019_karim_salon_lucknow",
+    "name": "Karim's Salon",
+    "city": "Lucknow",
+    "locality": "Alambagh",
+    "category": "salons",
+    "verified": true,
+    "owner": "Karim",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 9,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 756,
+      "calls": 2,
+      "ctr": 0.038,
+      "ctr_vs_peer": -0.002
+    },
+    "delta_7d": {
+      "views_pct": 0.26,
+      "calls_pct": 0.23
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1509
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_020_renu_salon_lucknow": {
+    "merchant_id": "m_020_renu_salon_lucknow",
+    "name": "Beauty Lounge by Renu",
+    "city": "Lucknow",
+    "locality": "Gomti Nagar",
+    "category": "salons",
+    "verified": true,
+    "owner": "Renu",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2945,
+      "calls": 33,
+      "ctr": 0.051,
+      "ctr_vs_peer": 0.011
+    },
+    "delta_7d": {
+      "views_pct": 0.04,
+      "calls_pct": -0.18
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1062
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_021_paras_salon_chandigarh": {
+    "merchant_id": "m_021_paras_salon_chandigarh",
+    "name": "Paras Hair & Beauty",
+    "city": "Chandigarh",
+    "locality": "Panchkula",
+    "category": "salons",
+    "verified": true,
+    "owner": "Paras",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 4171,
+      "calls": 31,
+      "ctr": 0.026,
+      "ctr_vs_peer": -0.014
+    },
+    "delta_7d": {
+      "views_pct": 0.18,
+      "calls_pct": -0.27
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1918
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_022_renu_salon_ahmedabad": {
+    "merchant_id": "m_022_renu_salon_ahmedabad",
+    "name": "Beauty Lounge by Renu",
+    "city": "Ahmedabad",
+    "locality": "Thaltej",
+    "category": "salons",
+    "verified": true,
+    "owner": "Renu",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3135,
+      "calls": 14,
+      "ctr": 0.041,
+      "ctr_vs_peer": 0.001
+    },
+    "delta_7d": {
+      "views_pct": -0.26,
+      "calls_pct": 0.15
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 417
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_023_sushma_salon_pune": {
+    "merchant_id": "m_023_sushma_salon_pune",
+    "name": "The Beauty Bar",
+    "city": "Pune",
+    "locality": "Baner",
+    "category": "salons",
+    "verified": true,
+    "owner": "Sushma",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2547,
+      "calls": 22,
+      "ctr": 0.058,
+      "ctr_vs_peer": 0.018
+    },
+    "delta_7d": {
+      "views_pct": 0.08,
+      "calls_pct": 0.02
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1454
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_024_geeta_salon_bangalore": {
+    "merchant_id": "m_024_geeta_salon_bangalore",
+    "name": "Glow Up Salon",
+    "city": "Bangalore",
+    "locality": "Koramangala",
+    "category": "salons",
+    "verified": true,
+    "owner": "Geeta",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 91,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1957,
+      "calls": 5,
+      "ctr": 0.026,
+      "ctr_vs_peer": -0.014
+    },
+    "delta_7d": {
+      "views_pct": 0.23,
+      "calls_pct": -0.22
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 326
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_025_salim_salon_mumbai": {
+    "merchant_id": "m_025_salim_salon_mumbai",
+    "name": "Studio Cuts",
+    "city": "Mumbai",
+    "locality": "Vile Parle",
+    "category": "salons",
+    "verified": true,
+    "owner": "Salim",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 4061,
+      "calls": 31,
+      "ctr": 0.045,
+      "ctr_vs_peer": 0.005
+    },
+    "delta_7d": {
+      "views_pct": 0.06,
+      "calls_pct": 0.2
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1298
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_026_karim_salon_ahmedabad": {
+    "merchant_id": "m_026_karim_salon_ahmedabad",
+    "name": "Karim's Salon",
+    "city": "Ahmedabad",
+    "locality": "Navrangpura",
+    "category": "salons",
+    "verified": true,
+    "owner": "Karim",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 273,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5344,
+      "calls": 13,
+      "ctr": 0.024,
+      "ctr_vs_peer": -0.016
+    },
+    "delta_7d": {
+      "views_pct": 0.2,
+      "calls_pct": 0.1
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1611
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_027_anand_restaurant_chennai": {
+    "merchant_id": "m_027_anand_restaurant_chennai",
+    "name": "Chai Point Cafe",
+    "city": "Chennai",
+    "locality": "Tambaram",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Anand",
+    "languages": [
+      "en",
+      "hi",
+      "ta"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 262,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3861,
+      "calls": 27,
+      "ctr": 0.045,
+      "ctr_vs_peer": 0.02
+    },
+    "delta_7d": {
+      "views_pct": 0.11,
+      "calls_pct": 0.28
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 550
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_028_karim_restaurant_chennai": {
+    "merchant_id": "m_028_karim_restaurant_chennai",
+    "name": "Kabab Junction",
+    "city": "Chennai",
+    "locality": "Anna Nagar",
+    "category": "restaurants",
+    "verified": false,
+    "owner": "Karim",
+    "languages": [
+      "en",
+      "hi",
+      "ta"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5251,
+      "calls": 54,
+      "ctr": 0.041,
+      "ctr_vs_peer": 0.016
+    },
+    "delta_7d": {
+      "views_pct": -0.05,
+      "calls_pct": 0.1
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 198
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_029_anand_restaurant_chandigarh": {
+    "merchant_id": "m_029_anand_restaurant_chandigarh",
+    "name": "Chai Point Cafe",
+    "city": "Chandigarh",
+    "locality": "Sector 8",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Anand",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 148,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2189,
+      "calls": 26,
+      "ctr": 0.025,
+      "ctr_vs_peer": 0.0
+    },
+    "delta_7d": {
+      "views_pct": -0.08,
+      "calls_pct": -0.21
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1525
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_030_sandeep_restaurant_chandigarh": {
+    "merchant_id": "m_030_sandeep_restaurant_chandigarh",
+    "name": "Tandoor Treats",
+    "city": "Chandigarh",
+    "locality": "Sector 35",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Sandeep",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 131,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3561,
+      "calls": 36,
+      "ctr": 0.039,
+      "ctr_vs_peer": 0.014
+    },
+    "delta_7d": {
+      "views_pct": -0.2,
+      "calls_pct": -0.27
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 285
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_031_suresh_restaurant_jaipur": {
+    "merchant_id": "m_031_suresh_restaurant_jaipur",
+    "name": "Madras Express",
+    "city": "Jaipur",
+    "locality": "Vaishali Nagar",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Suresh",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 10,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2467,
+      "calls": 18,
+      "ctr": 0.016,
+      "ctr_vs_peer": -0.009
+    },
+    "delta_7d": {
+      "views_pct": -0.2,
+      "calls_pct": -0.18
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 400
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_032_mukesh_restaurant_pune": {
+    "merchant_id": "m_032_mukesh_restaurant_pune",
+    "name": "Pizza Spot",
+    "city": "Pune",
+    "locality": "Aundh",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Mukesh",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 90,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 787,
+      "calls": 5,
+      "ctr": 0.053,
+      "ctr_vs_peer": 0.028
+    },
+    "delta_7d": {
+      "views_pct": 0.14,
+      "calls_pct": -0.24
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 889
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_033_anand_restaurant_bangalore": {
+    "merchant_id": "m_033_anand_restaurant_bangalore",
+    "name": "Chai Point Cafe",
+    "city": "Bangalore",
+    "locality": "BTM Layout",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Anand",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 211,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2349,
+      "calls": 13,
+      "ctr": 0.025,
+      "ctr_vs_peer": 0.0
+    },
+    "delta_7d": {
+      "views_pct": 0.13,
+      "calls_pct": -0.04
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1012
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_034_suresh_restaurant_delhi": {
+    "merchant_id": "m_034_suresh_restaurant_delhi",
+    "name": "Madras Express",
+    "city": "Delhi",
+    "locality": "Dwarka",
+    "category": "restaurants",
+    "verified": true,
+    "owner": "Suresh",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 124,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5125,
+      "calls": 12,
+      "ctr": 0.056,
+      "ctr_vs_peer": 0.031
+    },
+    "delta_7d": {
+      "views_pct": -0.16,
+      "calls_pct": -0.14
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1773
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_035_manisha_gym_delhi": {
+    "merchant_id": "m_035_manisha_gym_delhi",
+    "name": "Vyayam Yoga",
+    "city": "Delhi",
+    "locality": "Dwarka",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Manisha",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 142,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2612,
+      "calls": 30,
+      "ctr": 0.038,
+      "ctr_vs_peer": -0.007
+    },
+    "delta_7d": {
+      "views_pct": -0.26,
+      "calls_pct": 0.02
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1026
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_036_roshni_gym_ahmedabad": {
+    "merchant_id": "m_036_roshni_gym_ahmedabad",
+    "name": "Active Life Gym",
+    "city": "Ahmedabad",
+    "locality": "Maninagar",
+    "category": "gyms",
+    "verified": false,
+    "owner": "Roshni",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 35,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2954,
+      "calls": 5,
+      "ctr": 0.052,
+      "ctr_vs_peer": 0.007
+    },
+    "delta_7d": {
+      "views_pct": -0.25,
+      "calls_pct": 0.27
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 60
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_037_pooja_gym_bangalore": {
+    "merchant_id": "m_037_pooja_gym_bangalore",
+    "name": "Bend & Burn",
+    "city": "Bangalore",
+    "locality": "Koramangala",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Pooja",
+    "languages": [
+      "en",
+      "hi",
+      "kn"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 162,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5934,
+      "calls": 65,
+      "ctr": 0.042,
+      "ctr_vs_peer": -0.003
+    },
+    "delta_7d": {
+      "views_pct": -0.07,
+      "calls_pct": 0.06
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 387
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_038_pooja_gym_chandigarh": {
+    "merchant_id": "m_038_pooja_gym_chandigarh",
+    "name": "Bend & Burn",
+    "city": "Chandigarh",
+    "locality": "Sector 8",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Pooja",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 132,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3778,
+      "calls": 41,
+      "ctr": 0.026,
+      "ctr_vs_peer": -0.019
+    },
+    "delta_7d": {
+      "views_pct": 0.2,
+      "calls_pct": 0.03
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1066
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_039_karan_gym_jaipur": {
+    "merchant_id": "m_039_karan_gym_jaipur",
+    "name": "Iron Forge Fitness",
+    "city": "Jaipur",
+    "locality": "Jhotwara",
+    "category": "gyms",
+    "verified": false,
+    "owner": "Karan",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 85,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2055,
+      "calls": 23,
+      "ctr": 0.027,
+      "ctr_vs_peer": -0.018
+    },
+    "delta_7d": {
+      "views_pct": 0.22,
+      "calls_pct": 0.11
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 657
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_040_karan_gym_ahmedabad": {
+    "merchant_id": "m_040_karan_gym_ahmedabad",
+    "name": "Iron Forge Fitness",
+    "city": "Ahmedabad",
+    "locality": "Thaltej",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Karan",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "trial",
+      "days_remaining": 3,
+      "plan": "Trial"
+    },
+    "performance": {
+      "views": 4613,
+      "calls": 11,
+      "ctr": 0.044,
+      "ctr_vs_peer": -0.001
+    },
+    "delta_7d": {
+      "views_pct": -0.2,
+      "calls_pct": -0.26
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 951
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_041_akash_gym_hyderabad": {
+    "merchant_id": "m_041_akash_gym_hyderabad",
+    "name": "Fit Republic",
+    "city": "Hyderabad",
+    "locality": "Gachibowli",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Akash",
+    "languages": [
+      "en",
+      "hi",
+      "te"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 111,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3185,
+      "calls": 7,
+      "ctr": 0.019,
+      "ctr_vs_peer": -0.026
+    },
+    "delta_7d": {
+      "views_pct": 0.05,
+      "calls_pct": 0.03
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1564
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_042_pooja_gym_pune": {
+    "merchant_id": "m_042_pooja_gym_pune",
+    "name": "Bend & Burn",
+    "city": "Pune",
+    "locality": "Aundh",
+    "category": "gyms",
+    "verified": true,
+    "owner": "Pooja",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "trial",
+      "days_remaining": 10,
+      "plan": "Trial"
+    },
+    "performance": {
+      "views": 5509,
+      "calls": 47,
+      "ctr": 0.059,
+      "ctr_vs_peer": 0.014
+    },
+    "delta_7d": {
+      "views_pct": -0.12,
+      "calls_pct": -0.27
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 667
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_043_komal_pharmacie_ahmedabad": {
+    "merchant_id": "m_043_komal_pharmacie_ahmedabad",
+    "name": "Daily Care Medicos",
+    "city": "Ahmedabad",
+    "locality": "Naranpura",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Komal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 270,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 4622,
+      "calls": 25,
+      "ctr": 0.03,
+      "ctr_vs_peer": -0.008
+    },
+    "delta_7d": {
+      "views_pct": 0.07,
+      "calls_pct": -0.02
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1391
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_044_vinod_pharmacie_chennai": {
+    "merchant_id": "m_044_vinod_pharmacie_chennai",
+    "name": "Family Health Pharmacy",
+    "city": "Chennai",
+    "locality": "Porur",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Vinod",
+    "languages": [
+      "en",
+      "hi",
+      "ta"
+    ],
+    "subscription": {
+      "status": "expired",
+      "days_remaining": 0,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3421,
+      "calls": 28,
+      "ctr": 0.025,
+      "ctr_vs_peer": -0.013
+    },
+    "delta_7d": {
+      "views_pct": 0.25,
+      "calls_pct": 0.05
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1473
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_045_vinod_pharmacie_mumbai": {
+    "merchant_id": "m_045_vinod_pharmacie_mumbai",
+    "name": "Family Health Pharmacy",
+    "city": "Mumbai",
+    "locality": "Worli",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Vinod",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 227,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 5572,
+      "calls": 31,
+      "ctr": 0.04,
+      "ctr_vs_peer": 0.002
+    },
+    "delta_7d": {
+      "views_pct": -0.14,
+      "calls_pct": -0.12
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 602
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_046_sunita_pharmacie_lucknow": {
+    "merchant_id": "m_046_sunita_pharmacie_lucknow",
+    "name": "Reliable Medicos",
+    "city": "Lucknow",
+    "locality": "Aliganj",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Sunita",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 115,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 1715,
+      "calls": 2,
+      "ctr": 0.054,
+      "ctr_vs_peer": 0.016
+    },
+    "delta_7d": {
+      "views_pct": -0.25,
+      "calls_pct": 0.27
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 245
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_047_anil_pharmacie_chandigarh": {
+    "merchant_id": "m_047_anil_pharmacie_chandigarh",
+    "name": "Healthwell Pharmacy",
+    "city": "Chandigarh",
+    "locality": "Mohali",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Anil",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 23,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 2307,
+      "calls": 8,
+      "ctr": 0.031,
+      "ctr_vs_peer": -0.007
+    },
+    "delta_7d": {
+      "views_pct": -0.23,
+      "calls_pct": 0.28
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 698
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_048_vinod_pharmacie_mumbai": {
+    "merchant_id": "m_048_vinod_pharmacie_mumbai",
+    "name": "Family Health Pharmacy",
+    "city": "Mumbai",
+    "locality": "Borivali",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Vinod",
+    "languages": [
+      "en",
+      "hi",
+      "mr"
+    ],
+    "subscription": {
+      "status": "trial",
+      "days_remaining": 5,
+      "plan": "Trial"
+    },
+    "performance": {
+      "views": 5870,
+      "calls": 12,
+      "ctr": 0.019,
+      "ctr_vs_peer": -0.019
+    },
+    "delta_7d": {
+      "views_pct": -0.1,
+      "calls_pct": 0.18
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 222
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_049_komal_pharmacie_lucknow": {
+    "merchant_id": "m_049_komal_pharmacie_lucknow",
+    "name": "Daily Care Medicos",
+    "city": "Lucknow",
+    "locality": "Alambagh",
+    "category": "pharmacies",
+    "verified": true,
+    "owner": "Komal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 278,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 3384,
+      "calls": 34,
+      "ctr": 0.033,
+      "ctr_vs_peer": -0.005
+    },
+    "delta_7d": {
+      "views_pct": 0.2,
+      "calls_pct": -0.19
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1487
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  },
+  "m_050_bharti_pharmacie_chennai": {
+    "merchant_id": "m_050_bharti_pharmacie_chennai",
+    "name": "Wellness Cart",
+    "city": "Chennai",
+    "locality": "OMR",
+    "category": "pharmacies",
+    "verified": false,
+    "owner": "Bharti",
+    "languages": [
+      "en",
+      "hi",
+      "ta"
+    ],
+    "subscription": {
+      "status": "active",
+      "days_remaining": 16,
+      "plan": "Pro"
+    },
+    "performance": {
+      "views": 895,
+      "calls": 6,
+      "ctr": 0.044,
+      "ctr_vs_peer": 0.006
+    },
+    "delta_7d": {
+      "views_pct": -0.23,
+      "calls_pct": -0.01
+    },
+    "active_offers": [],
+    "signals": [],
+    "last_msg_topic": null,
+    "last_engagement": null,
+    "customer_aggregate": {
+      "total_unique_ytd": 1535
+    },
+    "review_themes": [],
+    "data_richness": "LOW"
+  }
+}
