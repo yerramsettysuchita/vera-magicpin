@@ -45,8 +45,11 @@ COMPOSITION RULES:
 2. OPENING (active_planning_intent): "{owner}, looks like you're planning {observed_intent} — {specific_deliverable} ready in 10 min?"
    - If no observed_intent signal: fall back to curious_ask_due pattern
    - Never fabricate a planning signal that isn't in the input
+   - CTA for active_planning: Binary (L8): "Reply YES — I'll [deliverable] now. YES / skip."
 
 3. ONE ASK ONLY: Never stack questions. One question or one deliverable offer — not both.
+
+3b. MERCHANT FIT RULE: Ground the message in ONE merchant-specific data point from the PERFORMANCE or MERCHANT section (e.g., their views trend, their lapsed count, their active members). "Your [N] views this month" beats "your platform activity."
 
 4. DO NOT mention subscription, renewal, or platform fees.
 

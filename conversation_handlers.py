@@ -45,12 +45,24 @@ _QUESTION_SIGNALS = {
     "tell me", "explain", "kaise", "kab", "kahan", "batao", "kya hai",
 }
 
-# -- Auto-reply follow-up responses -------------------------------------------
+_OOO_PATTERNS = [
+    "out of office", "out of the office", "auto", "automatic reply",
+    "ooo", "unavailable", "on leave", "on vacation", "holiday",
+    "dhanyawad", "dhanyavaad", "office par nahi", "travel mein",
+    "will respond", "will reply", "when i return", "back on",
+]
 
-_AUTO_REPLY_ACK = (
-    "Got it -- I'll check back when you're free. "
-    "Just reply when you'd like to continue."
-)
+
+def _is_ooo_message(msg: str) -> bool:
+    msg_lower = msg.lower()
+    return any(p in msg_lower for p in _OOO_PATTERNS)
+
+
+def _count_ooo_in_turns(turns: list[dict]) -> int:
+    return sum(
+        1 for t in turns
+        if t.get("from") in ("merchant", "customer") and _is_ooo_message(t.get("msg", ""))
+    )
 
 # -- Intent-accepted follow-up templates per profile -------------------------
 
@@ -152,24 +164,20 @@ def handle_merchant_reply(
             "_state": "declined",
         }
 
-    # Priority 3: Auto-reply detection -> wait, then end if persists
-    if state == "auto_reply" or detect_auto_reply(turns, threshold=3):
-        vera_msgs_after_auto = [
-            t for t in turns
-            if t.get("from") == "vera" and "check back" in t.get("msg", "").lower()
-        ]
-        if vera_msgs_after_auto:
+    # Priority 3: Auto-reply / OOO detection
+    ooo_count = _count_ooo_in_turns(turns)
+    if ooo_count >= 1 or state == "auto_reply" or detect_auto_reply(turns, threshold=2):
+        if ooo_count >= 2:
             return {
                 "action": "end",
-                "rationale": "Auto-reply detected (3+ identical messages); already acknowledged — ending conversation.",
+                "rationale": "Auto-reply on 2+ turns — merchant is OOO; ending conversation gracefully.",
                 "_state": "auto_reply_end",
             }
         return {
-            "action": "continue",
-            "body": _AUTO_REPLY_ACK,
-            "cta": "Reply when you're free",
-            "rationale": "Auto-reply detected — acknowledging and standing by; not continuing the sales thread.",
-            "_state": "auto_reply_ack",
+            "action": "wait",
+            "wait_seconds": 3600,
+            "rationale": "Auto-reply detected — merchant is OOO; waiting 1 hour before next check-in.",
+            "_state": "auto_reply_wait",
         }
 
     # Priority 4: Intent transition -> deliver the thing immediately

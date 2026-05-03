@@ -38,12 +38,15 @@ COMPOSITION RULES:
    Bad: "Great job! You should think about how to capitalize on this."
    Good: "Want me to draft the engagement post right now while the signal is hot?"
 
-5. CTA: "Want me to [specific deliverable]?" or "Shall I draft X right now?"
+5. CTA: Binary commitment (L8): "Reply YES — I'll [specific deliverable] right now. YES / skip."
+   Do NOT use "Want me to...?" or "Shall I...?" — binary YES/NO drives 3x higher response rates.
 
-6. TOTAL LENGTH: 2-4 lines.
+6. MERCHANT FIT RULE: Reference the merchant's actual metric from PERFORMANCE (e.g., "your calls jumped from [baseline] to [value_now]" or "your CTR hit [X]% vs category avg [Y]%"). Numbers specific to this merchant = high Merchant Fit score.
+
+7. TOTAL LENGTH: 2-4 lines.
    BODY CHARACTER LIMIT: 120-250 characters. Wins deserve celebration, not essays.
 
-7. LANGUAGE RULES: Match LANGUAGES field. Hinglish where "hi" is in LANGUAGES + North/Central India city.
+8. LANGUAGE RULES: Match LANGUAGES field. Hinglish where "hi" is in LANGUAGES + North/Central India city.
 
 ═══════════════════════════════════════════════════════
 ANTI-PATTERNS (will lower score):

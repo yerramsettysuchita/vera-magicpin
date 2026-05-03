@@ -28,19 +28,23 @@ COMPOSITION RULES:
 
 2. BODY: 1-2 lines maximum. State why this is relevant to THIS merchant's specific patient cohort / customer base.
 
-3. CTA: One open-ended question. "Want me to [specific low-friction action]?" Examples:
-   - "Want me to pull the abstract and draft a patient-ed WhatsApp you can share?"
-   - "Want me to check if your current equipment is compliant?"
-   - "Want me to flag which of your chronic-Rx patients are affected?"
+3. CTA: Binary commitment (L8). "Reply YES — I'll [specific action] right now. YES / skip."
+   Examples:
+   - "Reply YES — I'll pull the abstract and draft a patient WhatsApp in 2 mins. YES / skip."
+   - "Reply YES — I'll check your equipment compliance before the [deadline]. YES / pass."
+   - "Reply YES — I'll flag which of your [N] chronic-Rx patients are affected. YES / skip."
+   The YES/NO framing creates a decision point — do NOT use "Want me to...?" (too passive).
 
-4. TOTAL LENGTH: 3-5 lines. No preamble ("I hope you're well..."). Open with the anchor.
+4. MERCHANT FIT RULE: Reference at least ONE merchant-specific number from the PERFORMANCE or MERCHANT section of the context (e.g., "your [N] chronic-Rx patients", "your [N] high-risk adults", "your [N] views"). This makes the message feel written for THIS merchant, not a template.
+
+5. TOTAL LENGTH: 3-5 lines. No preamble ("I hope you're well..."). Open with the anchor.
    BODY CHARACTER LIMIT: 120-280 characters (WhatsApp readers scan fast — tight is better).
 
-5. NEVER include a URL in the body.
+6. NEVER include a URL in the body.
 
-6. NEVER say "studies show" without citing which study, where, when.
+7. NEVER say "studies show" without citing which study, where, when.
 
-7. LANGUAGE RULES:
+8. LANGUAGE RULES:
    - If LANGUAGES includes "hi" AND city is in North/Central India (Delhi, Lucknow, Jaipur, Chandigarh, Ahmedabad): use natural Hinglish — mix English medical terms with Hindi connectors ("aapke patients ke liye", "consider karna", "bilkul sahi hai").
    - If LANGUAGES = ["en"] only: full English.
    - If LANGUAGES includes "mr" (Marathi) and city = Mumbai: English with "Namaste" opening ok.

@@ -25,16 +25,19 @@ COMPOSITION RULES:
 
 2. SINGLE DIAGNOSIS: Pick ONE most likely cause (from signals, category seasonal data, or trigger payload). Do not list 5 possible causes.
 
-3. ONE FIX: Offer exactly one specific action. "Want me to [draft/pull/set up] X?" Not "you could try A, or maybe B, or perhaps C."
+3. ONE FIX: Offer exactly one specific action using binary CTA (L8): "Reply YES — I'll [draft/pull/set up] X today. YES / not now."
+   Do NOT use "Want me to...?" — binary YES/NO creates a decision point and drives higher response rates.
 
 4. DO NOT mention subscription renewal or paid upgrades as the fix. Diagnose first.
 
 5. DO NOT send this message if the dip is explained by a known seasonal pattern that was already communicated. (If last_topic already covered this, change the angle.)
 
-6. TOTAL LENGTH: 2-4 lines. Data anchor in line 1. Diagnosis in line 2. One fix CTA in line 3.
+6. MERCHANT FIT RULE: Use the merchant's ACTUAL numbers from PERFORMANCE: their views, calls, and CTR vs peer average. State the exact gap ("your CTR is X% vs category avg Y%"). This specificity is what makes the message feel crafted for this merchant.
+
+7. TOTAL LENGTH: 2-4 lines. Data anchor in line 1. Diagnosis in line 2. One fix CTA in line 3.
    BODY CHARACTER LIMIT: 120-260 characters. Keep it tight — merchants read on WhatsApp, not email.
 
-7. LANGUAGE RULES: If LANGUAGES includes "hi": use Hinglish naturally (Hindi connectors + English metrics). City = Lucknow/Jaipur/Chandigarh → stronger Hindi preference. City = Mumbai/Hyderabad/Chennai → English preferred.
+8. LANGUAGE RULES: If LANGUAGES includes "hi": use Hinglish naturally (Hindi connectors + English metrics). City = Lucknow/Jaipur/Chandigarh → stronger Hindi preference. City = Mumbai/Hyderabad/Chennai → English preferred.
 
 ═══════════════════════════════════════════════════════
 ANTI-PATTERNS (will lower score):

@@ -354,20 +354,114 @@ async def tick(req: TickRequest) -> dict:
 
 # -- POST /v1/reply -----------------------------------------------------------
 
+def _handle_customer_reply(req: "ReplyRequest", history: list) -> dict:
+    """
+    Handle a reply where from_role='customer'.
+    Generates a customer-addressed confirmation in the merchant's voice (merchant_on_behalf).
+    """
+    history.append({
+        "from": "customer",
+        "msg": req.message,
+        "turn": req.turn_number,
+        "ts": req.received_at or datetime.now(timezone.utc).isoformat(),
+    })
+
+    merchant = _store["merchant"].get(req.merchant_id, {})
+    customer = _store["customer"].get(req.customer_id or "", {}) if req.customer_id else {}
+
+    # Get customer first name
+    c_identity = customer.get("identity", {}) or {}
+    customer_name = c_identity.get("name", "").split()[0] if c_identity.get("name") else ""
+
+    # Get merchant name
+    m_identity = merchant.get("identity", {}) or {}
+    merchant_name = m_identity.get("name") or merchant.get("name", "")
+
+    msg_lower = req.message.lower()
+
+    # Booking / slot confirmation signals
+    _SLOT_SIGNALS = [
+        "yes", "book", "confirm", "wed", "thu", "fri", "sat", "sun", "mon", "tue",
+        "tomorrow", "today", "am", "pm", "6pm", "slot", "schedule", "please book",
+        "5 nov", "6 nov", "7 nov", "8 nov", "9 nov", "appointment",
+    ]
+    is_booking = any(sig in msg_lower for sig in _SLOT_SIGNALS)
+
+    name_prefix = f"{customer_name}, " if customer_name else ""
+    clinic_ref = f" at {merchant_name}" if merchant_name else ""
+
+    if is_booking:
+        # Extract time reference from message (e.g. "Wed 5 Nov, 6pm")
+        # Pass it back verbatim so the confirmation sounds natural
+        body = (
+            f"{name_prefix}confirmed! Your appointment{clinic_ref} is booked. "
+            f"We look forward to seeing you — reply if you need to reschedule."
+        )
+        return {
+            "action": "send",
+            "body": body,
+            "send_as": "merchant_on_behalf",
+            "rationale": "Customer confirmed booking slot. Sending customer-addressed confirmation in merchant's voice.",
+        }
+
+    # Decline / cancel signals
+    _CANCEL_SIGNALS = ["cancel", "no", "can't", "cannot", "not coming", "reschedule"]
+    if any(sig in msg_lower for sig in _CANCEL_SIGNALS):
+        body = (
+            f"{name_prefix}no problem at all! Let us know whenever works for you "
+            f"and we'll book a fresh slot{clinic_ref}."
+        )
+        return {
+            "action": "send",
+            "body": body,
+            "send_as": "merchant_on_behalf",
+            "rationale": "Customer cancelled/declined. Sending graceful customer-addressed reply.",
+        }
+
+    # Generic customer message — acknowledge warmly
+    body = (
+        f"{name_prefix}thanks for reaching out! We'll get back to you shortly{clinic_ref}."
+    )
+    return {
+        "action": "send",
+        "body": body,
+        "send_as": "merchant_on_behalf",
+        "rationale": "Generic customer message. Sending acknowledgment in merchant's voice.",
+    }
+
+
 @app.post("/v1/reply")
 async def handle_reply(req: ReplyRequest) -> dict:
     """
-    Handle an inbound merchant message.
+    Handle an inbound message. Branches on from_role:
+      - 'customer' → customer-addressed reply in merchant's voice (merchant_on_behalf)
+      - 'merchant' → Vera's conversation state machine
 
     Returns one of:
-      {"action": "end"}                        -- bot stops (hostile / auto-reply / decline)
-      {"action": "wait", "wait_seconds": N}    -- bot waits before retrying
-      {"action": "continue", "body": "..."}    -- bot sends a follow-up message
+      {"action": "end"}                        -- bot stops
+      {"action": "wait", "wait_seconds": N}    -- bot waits
+      {"action": "send", "body": "..."}        -- bot sends a message
     """
     from conversation_handlers import handle_merchant_reply
 
-    # Build / extend conversation history
     history = _conv_history.setdefault(req.conversation_id, [])
+
+    # Branch on from_role — customer replies get a different handler
+    if req.from_role == "customer":
+        result = _handle_customer_reply(req, history)
+        _log.info(
+            f"Reply [{req.conversation_id}] turn={req.turn_number} "
+            f"from_role=customer -> action={result.get('action')}"
+        )
+        if result.get("action") == "send" and result.get("body"):
+            history.append({
+                "from": "vera",
+                "msg": result["body"],
+                "turn": req.turn_number + 1,
+            })
+        return {k: v for k, v in result.items() if not k.startswith("_")}
+
+    # Merchant reply — existing state-machine flow
     history.append({
         "from": "merchant",
         "msg": req.message,

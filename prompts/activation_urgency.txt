@@ -58,12 +58,17 @@ COMPOSITION RULES:
    - Lead with the data, not the alarm
    - No preamble ("I hope you're well...")
 
-2. SINGLE ACTION: One clear question or ask. Not a list of options.
+2. SINGLE ACTION + BINARY CTA: One clear ask using L8 binary format for high-urgency sub-kinds:
+   - competitor/renewal/gbp: "Reply YES — [action]. YES / pass."
+   - dormant/review: open-ended question (L7 — re-open conversation)
+   Never stack options. Never use "Want me to...?" for competitor/renewal/gbp triggers.
 
 3. DORMANT RULE: Do not mention subscription expiry if last_topic was subscription expiry.
    Ask about something different — the merchant's current situation, a new angle.
 
-4. TOTAL LENGTH: 2-3 lines max. Data → impact → single ask.
+4. MERCHANT FIT RULE: Reference the merchant's actual data from PERFORMANCE or MERCHANT section — their specific lapsed customer count, CTR vs peers, or active members. Do NOT use generic language like "some customers" when you have the actual number.
+
+5. TOTAL LENGTH: 2-3 lines max. Data → impact → single ask.
    BODY CHARACTER LIMIT: 130-270 characters.
 
 5. LANGUAGE RULES: If LANGUAGES includes "hi": Hinglish is natural for North India cities. City = Lucknow/Jaipur/Patna → more Hindi. City = Mumbai/Hyderabad/Chennai → English.

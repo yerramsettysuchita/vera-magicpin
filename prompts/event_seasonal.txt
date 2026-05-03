@@ -39,8 +39,13 @@ COMPOSITION RULES:
    Bad: "You should run a promotion"
    Good: "I'll draft the Diwali bridal campaign + WhatsApp message — live in 10 min?"
 
-4. BINARY CTA: Yes/No or specific choice.
-   "Shall I draft it?" or "Want the Diwali campaign — YES or NO?"
+4. BINARY CTA (L8 — required): "Reply YES — I'll [specific deliverable] in 10 min. YES / skip."
+   Examples:
+   - "Reply YES — I'll draft the Diwali bridal campaign + WhatsApp message in 10 min. YES / skip."
+   - "Reply YES — I'll set up the weeknight combo offer now. YES / pass."
+   Do NOT use "Shall I draft it?" — binary YES/NO is required for Engagement Compulsion score.
+
+4b. MERCHANT FIT RULE: Reference the merchant's actual context — their current CTR position, their views count, or their specific service (e.g., "your Saturday bridal slots"). Make it feel specific to THIS merchant, not a category template.
 
 5. TOTAL LENGTH: 3-4 lines. Heads-up → insight → offer.
    BODY CHARACTER LIMIT: 130-280 characters. The insight must land in one read.
