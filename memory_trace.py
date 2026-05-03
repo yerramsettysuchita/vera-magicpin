@@ -123,12 +123,21 @@ def detect_auto_reply(turns: list[dict], threshold: int = 3) -> bool:
 
 def detect_intent_transition(turns: list[dict]) -> bool:
     """
-    Detect if merchant has said "ok let's do it" or similar — signals
-    intent transition from qualifying to action mode.
+    Detect if merchant has accepted / indicated they want Vera to act.
+    Broad set of signals — merchants express acceptance in many ways.
     """
     positive_signals = {
+        # Explicit yes
         "ok", "okay", "yes", "let's do it", "do it", "go ahead", "sure",
-        "haan", "haan ji", "bilkul", "please proceed", "send it", "send"
+        "haan", "haan ji", "bilkul", "please proceed", "send it", "send",
+        # Help-request acceptance ("Got it doc — need help auditing")
+        "got it", "need help", "need help with", "please help", "help me with",
+        "help with", "please do", "that would help", "would be great",
+        # Positive acknowledgement
+        "sounds good", "great", "perfect", "proceed", "let's go", "ya please",
+        "chalo", "kar do", "bhejna", "ready", "please", "confirm",
+        # Implicit acceptance in longer phrases
+        "we have an", "we use", "our setup", "our equipment", "our current",
     }
     merchant_msgs = [t.get("msg", "").strip().lower() for t in turns if t.get("from") == "merchant"]
     for msg in reversed(merchant_msgs[-3:]):

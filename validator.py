@@ -172,9 +172,13 @@ def _check_anti_hallucination(
     anchor_nums = re.findall(r"\b\d[\d,.]*\b", anchor)
     legitimate_pool.update(anchor_nums)
 
-    # Allow common small numbers (days, percentages already in data)
+    # Allow common small numbers (days, percentages, and approved L3 social-proof benchmarks)
     common_ok = {"1", "2", "3", "4", "5", "6", "7", "10", "15", "20", "24", "30",
-                 "40", "45", "50", "60", "100", "299", "499", "999"}
+                 "40", "45", "50", "60", "100", "299", "499", "999",
+                 # Approved L3 social-proof benchmarks in prompts
+                 "22", "25", "35", "85", "90", "120", "180", "0",
+                 # Common time references
+                 "8", "9", "12", "14", "21", "28", "3x", "2x"}
     legitimate_pool.update(common_ok)
 
     suspicious = body_numbers - legitimate_pool

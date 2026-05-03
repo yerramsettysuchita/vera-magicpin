@@ -38,6 +38,10 @@ _INTENT_ACCEPTED_SIGNALS = {
     "haan", "haan ji", "bilkul", "please proceed", "send it", "send",
     "sounds good", "great", "perfect", "done", "proceed",
     "chalo karte hain", "kar do", "bhejna", "ready",
+    # Help-request acceptance (merchant says "need help" = they accept)
+    "got it", "need help", "please help", "help me with", "help with",
+    "please do", "that would help", "would be great", "let's go",
+    "ya please", "confirm", "we have an", "our setup", "our equipment",
 }
 
 _QUESTION_SIGNALS = {
@@ -80,6 +84,67 @@ _INTENT_FOLLOW_UPS: dict[str, str] = {
 _DEFAULT_INTENT_FOLLOW_UP = (
     "Got it -- working on it now. I'll have the draft ready in 2 minutes."
 )
+
+
+def _build_merchant_specific_follow_up(profile: str, merchant: dict, turns: list[dict]) -> str:
+    """
+    Build a merchant-specific follow-up that references the merchant's actual context.
+    Uses merchant identity and the last vera message to personalize the confirmation.
+    """
+    identity = merchant.get("identity", {}) or {}
+    owner = identity.get("owner_first_name") or identity.get("name", "").split()[0] if identity.get("name") else ""
+    merchant_name = identity.get("name") or merchant.get("name", "")
+    category = merchant.get("category_slug", "")
+    perf = merchant.get("performance", {}) or {}
+
+    # Get last vera message for context
+    vera_msgs = [t.get("msg", "") for t in turns if t.get("from") == "vera"]
+    last_vera = vera_msgs[-1] if vera_msgs else ""
+
+    # Get last merchant message to understand what they asked for
+    merchant_msgs = [t.get("msg", "") for t in turns if t.get("from") == "merchant"]
+    last_merchant = merchant_msgs[-1].lower() if merchant_msgs else ""
+
+    name_prefix = f"{owner}, " if owner else ""
+
+    # Profile-specific, context-aware follow-ups
+    if profile == "knowledge_digest":
+        if "audit" in last_merchant or "compliance" in last_merchant or "equipment" in last_merchant:
+            return f"{name_prefix}on it — auditing your setup against the latest compliance requirements. Draft ready in 2 minutes."
+        if "patient" in last_merchant or "customers" in last_merchant:
+            return f"{name_prefix}pulling the patient-impact summary now. I'll have the WhatsApp draft ready in 2 minutes."
+        return f"{name_prefix}on it — pulling the full brief and drafting your response message. Ready in 2 minutes."
+
+    elif profile == "perf_dip_recovery":
+        calls = perf.get("calls", 0)
+        views = perf.get("views", 0)
+        if calls:
+            return f"{name_prefix}diagnosing your call pattern now ({calls} calls this month). One specific fix coming in 2 minutes."
+        return f"{name_prefix}pulling the diagnosis now. I'll share one specific fix in a moment."
+
+    elif profile == "perf_win":
+        return f"{name_prefix}drafting the follow-up campaign now while the momentum is hot. Ready in 2 minutes."
+
+    elif profile == "event_seasonal":
+        return f"{name_prefix}building the campaign + WhatsApp message now. Done in 10 minutes."
+
+    elif profile == "activation_urgency":
+        lapsed = (merchant.get("customer_aggregate", {}) or {}).get("lapsed_90d_plus", 0)
+        if lapsed:
+            return f"{name_prefix}on it — setting up the win-back campaign for your {lapsed} lapsed customers. Ready shortly."
+        return f"{name_prefix}on it — working on it now. I'll have the draft ready in 2 minutes."
+
+    elif profile == "planning_curiosity":
+        return f"{name_prefix}mapping it out now based on what's working for similar {category} businesses. Plan ready in 5 minutes."
+
+    elif profile == "customer_recall":
+        return f"{name_prefix}confirmed — sending the reminder now."
+
+    elif profile == "customer_winback":
+        return f"{name_prefix}booking it in — I'll confirm the slot shortly."
+
+    # Default with owner name
+    return f"{name_prefix}{_DEFAULT_INTENT_FOLLOW_UP[0].lower()}{_DEFAULT_INTENT_FOLLOW_UP[1:]}"
 
 
 def _last_merchant_msg(turns: list[dict]) -> str:
@@ -183,10 +248,7 @@ def handle_merchant_reply(
     # Priority 4: Intent transition -> deliver the thing immediately
     if state == "accepted" or detect_intent_transition(turns):
         profile = _get_profile_from_history(turns)
-        follow_up = _INTENT_FOLLOW_UPS.get(profile, _DEFAULT_INTENT_FOLLOW_UP)
-        owner = (merchant.get("identity") or {}).get("owner_first_name", "")
-        if owner:
-            follow_up = f"{owner}, {follow_up[0].lower()}{follow_up[1:]}"
+        follow_up = _build_merchant_specific_follow_up(profile, merchant, turns)
         return {
             "action": "continue",
             "body": follow_up,

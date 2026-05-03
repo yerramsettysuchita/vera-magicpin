@@ -59,12 +59,12 @@ _PROFILE_SEND_AS: dict[str, str] = {
 
 # CTA type per profile (used to validate composer output)
 _PROFILE_CTA_TYPE: dict[str, str] = {
-    "knowledge_digest":   "open_ended",
-    "perf_dip_recovery":  "open_ended",
-    "perf_win":           "open_ended",
+    "knowledge_digest":   "binary",      # "Reply YES — I'll [action]. YES / skip."
+    "perf_dip_recovery":  "binary",      # "Reply YES — I'll [fix] today. YES / not now."
+    "perf_win":           "binary",      # "Reply YES — I'll [deliverable] now. YES / skip."
     "event_seasonal":     "binary",
-    "activation_urgency": "mixed",       # binary for renewal/competitor; open for dormant/review
-    "planning_curiosity": "open_ended",
+    "activation_urgency": "mixed",       # binary for renewal/competitor/gbp; open for dormant/review
+    "planning_curiosity": "mixed",       # open for curious_ask; binary for active_planning
     "customer_recall":    "multi_choice_or_binary",
     "customer_winback":   "binary",
 }
